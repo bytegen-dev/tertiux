@@ -4,11 +4,371 @@
     box-sizing: border-box;
 }
 
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
 
 .container{
     position: fixed;
+    top: 0;
+    left: 0;
     font-family: "Roboto", sans-serif;
     height: 100%;
     width: 100%;
-    background-image: linear-gradient(purple, peru);
+    padding: 90px  0 50px 0;
+    background-color: rgb(245, 230, 243);
+    overflow-x: hidden;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+}
+
+/* Navbar style starts here */
+
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    padding: 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    background-color: rgba(243, 236, 246, 0.213);
+    /* border-bottom: 2px solid; */
+}
+
+.show.navbar{
+}
+
+.navbar .hamburger{
+    height: 40px;
+    width: 40px;
+    color: rgb(84, 0, 77);
+    border: 3px solid;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.navbar .hamburger .dot{
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: rgb(84, 0, 77);
+    position: relative;
+}
+
+.navbar .hamburger .dot::before, .navbar .hamburger .dot::after{
+    content: "";
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background-color: inherit;
+    border-radius: inherit;
+}
+
+.navbar .hamburger .dot::before{
+    transform: translateX(10px);
+}
+
+.navbar .hamburger .dot::after{
+    transform: translateX(-10px);
+}
+
+
+
+.navbar .gotosubscription{
+    color: rgb(84, 0, 77);
+    height: 40px;
+    padding: 10px;
+    border: 3px solid;
+    border-radius: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+/* Navbar style ends here */
+
+
+
+
+/* About style starts here */
+
+    .about{
+        /* border: 2px solid; */
+        padding: 0 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .about .black-sun{
+        width: 200px;
+        height: 200px;
+        border: 5px solid rgb(61, 18, 58);
+        box-shadow: 0px 0px 60px rgba(26, 0, 26, 0.321);
+        border-radius: 50%;
+        background-image: url(student.png);
+        /* background-image:linear-gradient(rgba(255, 255, 255, 0), rgba(33, 33, 49, 0.386)) ,url(tertiux-black-sun.png); */
+        background-size: cover;
+        background-position: 20px 20px;
+        background-repeat: no-repeat;
+        /* margin-bottom: 20px; */
+    }
+
+    .about .hero{
+        padding: 10px;
+        /* border: 2px solid; */
+        margin-top: 40px;
+        font-size: 20px;
+        color: rgb(72, 2, 66);
+    }
+    
+    .about .hero h1{
+        font-weight: 550;
+        letter-spacing: 1.5px;
+        font-size: 35px !important;
+    }
+
+    .about .hero h1 span{
+        font-weight: 500;
+    }
+
+    .about .role-holder{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        position: relative;
+        margin: 40px 0;
+    }
+
+    .role-holder::before{
+        content: "";
+        position: absolute;
+        width: 100px;
+        height: 4px;
+        background-color: rgb(56, 45, 60); 
+        border-radius: 20px;
+        opacity: 0.2;
+        bottom: -40px;
+        animation: before 1s ease forwards;
+        animation-delay: 20s;
+    }
+
+    @keyframes before {
+        0%{}
+        100%{
+            width: 50px;
+            transform: translateY(-20px);
+        }
+    }
+    
+    .about .role-holder .role{
+        border-right: 2px solid rgb(36, 36, 51);
+        width: 100%;
+        padding: 10px;
+        font-size: 13px;
+        letter-spacing: 1px;
+        justify-content: center;
+        align-items: center;
+        animation: role 1s ease forwards;
+        animation-delay: 20s;
+        text-transform: capitalize;
+    }
+
+    @keyframes role {
+        0%{
+
+        }        
+        100%{
+            margin: 20px 0;
+            transform: scale(1.5);
+            border-right-color: transparent;
+        }        
+    }
+
+    .about .role-holder .role h3{
+        /* border: 2px solid; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .about .role-holder .languages{
+        border-left: 2px solid rgb(36, 36, 51);
+        position: relative;
+        display: flex;
+        /* flex-direction: column; */
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        animation: languages 1s ease forwards;
+        animation-delay: 20s;
+        /* overflow-y: hidden; */
+    }
+
+    @keyframes languages {
+        0%{
+            width: 100%;
+        }
+        100%{
+            width: 0px;
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+
+    .about .role-holder .languages .language{
+        position: absolute;
+        opacity: 0;
+        transition: all 0.5s ease;
+        color: rgb(84, 0, 77);
+        transform: translateY(40px);
+    }
+
+    
+    .about .role-holder .languages .language.active{
+        animation: skills 2s ease forwards;
+    }
+
+    .about .role-holder .languages .language.i{
+        animation: skills 2s ease forwards;
+        animation-delay: 2s;
+    }
+    .about .role-holder .languages .language.ii{
+        animation: skills 2s ease forwards;
+        animation-delay: 4s;
+    }
+
+    .about .role-holder .languages .language.iii{
+        animation: skills 2s ease forwards;
+        animation-delay: 6s;
+    }
+
+    .about .role-holder .languages .language.iv{
+        animation: skills 2s ease forwards;
+        animation-delay: 8s;
+    }
+
+    .about .role-holder .languages .language.iv{
+        animation: skills 2s ease forwards;
+        animation-delay: 10s;
+    }
+
+    .about .role-holder .languages .language.v{
+        animation: skills 2s ease forwards;
+        animation-delay: 12s;
+    }
+
+    .about .role-holder .languages .language.vi{
+        animation: skills 2s ease forwards;
+        animation-delay: 14s;
+    }
+
+    .about .role-holder .languages .language.vii{
+        animation: skills 2s ease forwards;
+        animation-delay: 16s;
+    }
+
+    .about .role-holder .languages .language.viii{
+        animation: skills 2s ease forwards;
+        animation-delay: 18s;
+    }
+    
+    @keyframes skills {
+        0%{
+            opacity: 0;
+        }
+
+        50%{
+          opacity: 1;
+          transform: translateY(0);
+        }
+        
+        100%{
+            transform: translateY(-30px);
+            opacity: 0;
+        }
+    }
+
+/* About style ends here */
+
+/* Links style starts here */
+
+    .links{
+        /* border: 2px solid; */
+        margin-top: 30px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .links .link-holder{
+        width: 100%;
+        padding: 10px 0;
+        /* border: 2px solid; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative !important;
+    }
+
+    .link-holder > div{
+        /* border: 2px solid red; */
+        width: 100% !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .links .link{
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 17px;
+        width: 250px !important;
+        background-color: rgb(56, 45, 60);
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        font-size: 17px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        transition: all 0.5s ease !important;
+    }
+    
+    .links .link:hover{
+        opacity: 0.6;
+    }
+
+/* Links style ends here */
+
+
+.subscription, .preloader, .menu{
+    position: fixed;
+    opacity: 0;
+    visibility: hidden;
 }

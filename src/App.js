@@ -4,14 +4,16 @@ import Links from "./Links";
 import About from "./About";
 import Subscription from "./Subscription";
 import Menu from "./Menu";
+import Preloader from "./Preloader";
 
 export default function App(){
     return(
         <div className="container">
             <Navbar className="navbar"/>
-            <Links className="links"/>
             <About className="about"/>
+            <Links className="links"/>
             <Subscription className="subscription"/>
+            <Preloader className="preloader"/>
             <Menu className="menu"/>
         </div>
     )
