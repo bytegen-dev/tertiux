@@ -21,6 +21,7 @@ export default function App(){
         }
     )
 
+
     function aboutBig(){
         setUiSettings(
             (prevState)=>{

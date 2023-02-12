@@ -435,6 +435,7 @@ body{
     border-radius: 12px;
     margin-top: 30px;
     transition: all 0.5s ease;
+    border: 2px solid #fff;
     /* opacity: 0.1; */
 }
 
