@@ -3,7 +3,7 @@ import React from "react";
 export default function Navbar(props){
     return(
         <div className={props.className}>
-            <div className="hamburger">
+            <div className="hamburger" onClick={props.onNext}>
                 <div className="dot"></div>
             </div>
             <div onClick={props.onNextii} className="gotosubscription">
