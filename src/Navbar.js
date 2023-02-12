@@ -7,7 +7,7 @@ export default function Navbar(props){
                 <div className="dot"></div>
             </div>
             <div onClick={props.onNextii} className="gotosubscription">
-                <i className="fa fa-"/><span>my Bio</span>
+                <i className="fa fa-circle-info"/><span>my Bio</span>
             </div>
         </div>
     )
