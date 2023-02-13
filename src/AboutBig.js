@@ -30,7 +30,7 @@ export default function AboutBig(props){
             <div className="return" onClick={props.onPrev}>
                 <i className="fa fa-arrow-left"/>
             </div>
-            <h1>my Bio <i class="fa-solid fa-address-card"></i></h1>
+            <h1>my Bio <i className="fa-solid fa-address-card"></i></h1>
             <div className="content">
                 <p>
                     I am a creative solutions provider in front-end development. My user-centric approach combines technical skills with a deep understanding of what makes a website both aesthetically pleasing and easy to use.

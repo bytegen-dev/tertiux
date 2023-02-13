@@ -80,6 +80,10 @@ export default function App(){
             }
     }
 
+    document.addEventListener("contextmenu", (event)=>{
+        event.preventDefault()
+    })
+
 
 //   const openSwipeMenu = () => {
 //   };
