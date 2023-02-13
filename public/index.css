@@ -134,30 +134,90 @@ body{
         border: 5px solid rgb(61, 18, 58);
         box-shadow: 0px 0px 60px rgba(26, 0, 26, 0.321);
         border-radius: 50%;
-        background-image: url(student.png);
+        background-image: url(isaac-i.jpg);
         /* background-image:linear-gradient(rgba(255, 255, 255, 0), rgba(33, 33, 49, 0.386)) ,url(tertiux-black-sun.png); */
         background-size: cover;
-        background-position: 20px 20px;
+        background-position: center;
         background-repeat: no-repeat;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
         /* margin-bottom: 20px; */
+    }
+
+    .about .black-sun::before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #0009;
+        /* backdrop-filter: blur(10px); */
+        border: 5px solid transparent;
+        transition: all 0.5s ease;
+        opacity: 0;
+    }
+
+    .about .black-sun:hover::before{
+        opacity: 1;
+    }
+
+    .about .black-sun a{
+        position: absolute;
+        color: rgb(246, 242, 245);
+        font-size: 40px;
+        transition: all 0.5s ease;
+        transform: translateY(-50px);
+        opacity: 0;
+        visibility: hidden;
+        text-shadow: 0px 0px 30px #000;
+    }
+
+    .about .black-sun:hover a{
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
     }
 
     .about .hero{
         padding: 10px;
-        /* border: 2px solid; */
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         margin-top: 40px;
         font-size: 20px;
         color: rgb(72, 2, 66);
     }
     
     .about .hero h1{
+        /* border: 2px solid; */
         font-weight: 550;
         letter-spacing: 1.5px;
-        font-size: 35px !important;
+        font-size: 7vw !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
     }
 
     .about .hero h1 span{
         font-weight: 500;
+    }
+
+    .about .hero span:last-child{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgb(107, 148, 237);
+    }
+
+    .about .hero .fa-check{
+        position: absolute;
+        color: #fff;
+        font-size: 15px;
     }
 
     .about .role-holder{
@@ -413,6 +473,10 @@ body{
     margin-bottom: 50px;
     color: rgb(247, 241, 246);
     letter-spacing: 1px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
 }
 
 .about-bigger p{
@@ -467,7 +531,7 @@ body{
     top: 0;
     left: 0;
     z-index: 10;
-    background-color: rgba(21, 19, 21, 0.867);
+    background-color: #000c;
     opacity: 0;
     visibility: hidden;
     transition: all 0.5s ease;
@@ -494,9 +558,11 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 0px 0px 10px #0000;
 }
 
 .show.menu{
+    box-shadow: 0px 0px 10px #0005;
     transform: translateY(0);
 }
 

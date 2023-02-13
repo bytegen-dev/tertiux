@@ -30,13 +30,13 @@ export default function AboutBig(props){
             <div className="return" onClick={props.onPrev}>
                 <i className="fa fa-arrow-left"/>
             </div>
-            <h1>Tertiux 创科</h1>
+            <h1>my Bio <i class="fa-solid fa-address-card"></i></h1>
             <div className="content">
                 <p>
-                    Tertiux is a creative solutions provider in front-end development. Our user-centric approach combines technical skills with a deep understanding of what makes a website both aesthetically pleasing and easy to use.
+                    I am a creative solutions provider in front-end development. My user-centric approach combines technical skills with a deep understanding of what makes a website both aesthetically pleasing and easy to use.
                 </p>
                 <p>
-                    With a talented and experienced team of developers, we deliver exceptional results through diverse perspectives and approaches. Our goal is to help clients create a web presence that provides a seamless user experience.
+                    With an experience of about 2 years in the tech industry, I deliver exceptional results through diverse perspectives and approaches. My goal is to help clients create a web presence that provides a seamless user experience.
                 </p>
                 <p>
                     Tertiux 创解 - Solving your web development needs through creativity.
