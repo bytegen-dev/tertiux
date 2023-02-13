@@ -38,10 +38,15 @@ body{
     padding: 90px  0 50px 0;
     background-color: rgb(245, 230, 243);
     overflow-x: hidden;
+    transition: all 0.5s ease;
     /* display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center; */
+}
+
+.dark.container{
+    background-color: rgb(26, 23, 26);
 }
 
 .container.nooverflow{
@@ -62,7 +67,12 @@ body{
     align-items: center;
     backdrop-filter: blur(10px);
     background-color: rgba(243, 236, 246, 0.213);
-    /* border-bottom: 2px solid; */
+    border-bottom: 2px solid transparent;
+}
+
+.dark .navbar{
+    background-color: #0002;
+    border-color: rgba(245, 230, 243, 0.194);
 }
 
 .show.navbar{
@@ -78,6 +88,11 @@ body{
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.dark .navbar .hamburger{
+    color: rgb(245, 230, 243);
 }
 
 .navbar .hamburger .dot{
@@ -86,6 +101,11 @@ body{
     border-radius: 50%;
     background-color: rgb(84, 0, 77);
     position: relative;
+    transition: all 0.5s ease;
+}
+
+.dark .navbar .hamburger .dot{
+    background-color: rgb(245, 230, 243);
 }
 
 .navbar .hamburger .dot::before, .navbar .hamburger .dot::after{
@@ -105,6 +125,10 @@ body{
     transform: translateX(-10px);
 }
 
+.navbar .hamburger:hover{
+    transform: rotate(90deg);
+}
+
 
 
 .navbar .gotosubscription{
@@ -119,6 +143,11 @@ body{
     align-items: center;
     letter-spacing: 1px;
     font-weight: 600;
+    transition: all 0.5s ease;
+}
+
+.dark .navbar .gotosubscription{
+    color: rgb(245, 230, 243);
 }
 
 /* Navbar style ends here */
@@ -154,7 +183,14 @@ body{
         justify-content: center;
         align-items: center;
         overflow: hidden;
+        transition: all 0.5s ease;
         /* margin-bottom: 20px; */
+    }
+
+    .dark .about .black-sun{
+        border:0px solid transparent;
+        background-size: 235px;
+        box-shadow: 0px 0px 50px #000;
     }
 
     .about .black-sun::before{
@@ -200,6 +236,10 @@ body{
         font-size: 20px;
         color: rgb(72, 2, 66);
     }
+
+    .dark .about .hero{
+        color: rgb(243, 236, 242);
+    }
     
     .about .hero h1{
         /* border: 2px solid; */
@@ -223,13 +263,13 @@ body{
         align-items: center;
         color: rgb(107, 148, 237);
     }
-
+    
     .about .hero .fa-check{
         position: absolute;
-        color: #fff;
         font-size: 15px;
+        color: #fff;
     }
-
+    
     .about .role-holder{
         display: flex;
         justify-content: center;
@@ -250,6 +290,11 @@ body{
         bottom: -40px;
         animation: before 1s ease forwards;
         animation-delay: 20s;
+    }
+
+    .dark .role-holder::before{
+        background-color: rgb(246, 242, 245);
+        opacity: 0.5;
     }
 
     @keyframes before {
@@ -273,6 +318,13 @@ body{
         text-transform: capitalize;
     }
 
+
+
+    .dark .about .role-holder .role{
+        border-color: rgb(246, 242, 245);
+        color: #fff;
+    }
+
     @keyframes role {
         0%{
 
@@ -280,7 +332,7 @@ body{
         100%{
             margin: 20px 0;
             transform: scale(1.5);
-            border-right-color: transparent;
+            border-right-color: transparent !important;
         }        
     }
 
@@ -305,6 +357,10 @@ body{
         /* overflow-y: hidden; */
     }
 
+    .dark .about .role-holder .languages{
+        border-left-color: rgb(246, 242, 245);
+    }
+
     @keyframes languages {
         0%{
             width: 100%;
@@ -322,6 +378,10 @@ body{
         transition: all 0.5s ease;
         color: rgb(84, 0, 77);
         transform: translateY(40px);
+    }
+
+    .dark .role-holder .languages .language{
+        color: rgb(181, 124, 172);
     }
 
     
@@ -410,7 +470,12 @@ body{
         display: flex;
         justify-content: center;
         align-items: center;
+        transition: all 0.5s ease;
         position: relative !important;
+    }
+
+    .dark .links .link-holder{
+        padding: 20px 0;
     }
 
     .link-holder > div{
@@ -438,6 +503,18 @@ body{
         font-weight: 500;
         letter-spacing: 1px;
         transition: all 0.5s ease !important;
+        border: 3px solid transparent;
+    }
+
+    .dark .links .link{
+        /* flex-direction: row-reverse; */
+        background-color: rgb(245, 230, 243);
+        color: rgb(26, 23, 26);
+        /* border-color: #7a6a7a; */
+    }
+
+    .dark .links .link i{
+        /* padding-right: 20px; */
     }
     
     .links .link:hover{
@@ -574,6 +651,10 @@ body{
     /* box-shadow: 0px 0px 10px #0000; */
 }
 
+.dark .menu{
+    background-color: rgb(46, 32, 45);
+}
+
 .show.menu{
     /* box-shadow: 0px 0px 10px #0005; */
     transform: translateY(0);
@@ -613,6 +694,10 @@ body{
     color: rgb(38, 21, 37);
 }
 
+.dark .menu .menu-holder .dark-mode{
+    color: rgb(243, 236, 242);
+}
+
 .menu .menu-holder .toggle{
     width: 40px;
     border-radius: 20px;
@@ -622,6 +707,11 @@ body{
     position: relative;
     align-items: center;
     justify-content: center;
+    transition: all 0.5s ease;
+}
+
+.menu .menu-holder .toggle.active{
+    background-color: rgb(246, 242, 245);
 }
 
 .menu .menu-holder .toggle::before{
@@ -631,15 +721,27 @@ body{
     height: 25px;
     border-radius: 50%;
     background-color: rgb(255, 255, 255);
-    left: 0;
+    /* left: 0; */
     box-shadow: 0px 0px 10px #0003;
+    transform: translateX(-10px);
+    transition: all 0.5s ease;
 }
+
+.menu .menu-holder .toggle.active::before{
+    background-color: rgb(12, 0, 19);
+    transform: translateX(10px);
+}
+
 
 .menu .copyrt{
     position: absolute;
     bottom: 20px;
     opacity: 0.3;
     letter-spacing: 1px;
+}
+
+.dark .menu .copyrt{
+    color: #fff;
 }
 
 /* menu styles ends here */

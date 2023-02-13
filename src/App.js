@@ -19,9 +19,14 @@ export default function App(){
             showLinkedin: false,
             showAboutBig: false,
             containerOverflow: true,
-            showBackdrop:false
+            showBackdrop:false,
+            darkMode:false,
         }
     )
+
+    function toggleDarkMode(){
+        setUiSettings((prevState)=>{return({...prevState, darkMode: !prevState.darkMode})})
+    }
 
 
     function aboutBig(){
@@ -61,6 +66,20 @@ export default function App(){
         });
     }
 
+    function darkModeTotal(){
+        const today = new Date()
+            let hour = today.getHours()
+            console.log(hour)
+            if (hour > 16 || hour < 7){
+                setUiSettings(
+                    (prevState)=>{
+                        return({...prevState, darkMode: true})
+                    }
+                )
+                return
+            }
+    }
+
 
 //   const openSwipeMenu = () => {
 //   };
@@ -68,18 +87,23 @@ export default function App(){
 //   const closeSwipeMenu = () => {
 //     setIsOpen(false);
 //   };
+    React.useEffect(
+        function(){
+            darkModeTotal()
+        }, []
+    )
 
 
 
     return(
-        <div className={uiSettings.containerOverflow ? "container" : "container nooverflow"}>
+        <div className={uiSettings.darkMode ? "container dark" : "container"}>
             <Navbar className="navbar" onNextii={aboutBig} onNext={menuToggle}/>
             <About className="about"/>
             <Links className="links"/>
             <Subscription className="subscription"/>
             <Preloader className="preloader"/>
             <Chatbubble className="chatbubble"/>
-            <Menu isOpen={isOpen} swipeUp={menuToggleX} className={uiSettings.showMenu?"show menu":"menu"}/>
+            <Menu darkMode={uiSettings.darkMode} isOpen={isOpen} swipeUp={menuToggleX} className={uiSettings.showMenu?"show menu":"menu"} onClick={toggleDarkMode}/>
             <div onClick={menuToggleX} className={uiSettings.showMenu ? "show backdrop" : "backdrop"}></div>
             <AboutBig onPrev={aboutBig} className={uiSettings.showAboutBig ? "show about-bigger" : "about-bigger"}/>
         </div>
