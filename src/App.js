@@ -7,6 +7,7 @@ import Menu from "./Menu";
 import AboutBig from "./AboutBig";
 import Preloader from "./Preloader";
 import Chatbubble from "./Chatbubble";
+// import Chatbot from "./Chatbot";
 
 export default function App(){
     const [uiSettings, setUiSettings] = React.useState(
@@ -70,7 +71,7 @@ export default function App(){
         const today = new Date()
             let hour = today.getHours()
             console.log(hour)
-            if (hour > 16 || hour < 7){
+            if (hour > 15 || hour < 7){
                 setUiSettings(
                     (prevState)=>{
                         return({...prevState, darkMode: true})
@@ -110,6 +111,7 @@ export default function App(){
             <Menu darkMode={uiSettings.darkMode} isOpen={isOpen} swipeUp={menuToggleX} className={uiSettings.showMenu?"show menu":"menu"} onClick={toggleDarkMode}/>
             <div onClick={menuToggleX} className={uiSettings.showMenu ? "show backdrop" : "backdrop"}></div>
             <AboutBig onPrev={aboutBig} className={uiSettings.showAboutBig ? "show about-bigger" : "about-bigger"}/>
+            {/* <Chatbot className="chatbot"/> */}
         </div>
     )
 }
