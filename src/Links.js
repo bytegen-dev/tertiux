@@ -26,7 +26,7 @@ export default function Links(props){
             </Swipe>
             <Swipe className="link-holder">
                 <div className="link">
-                <i className="fa-brands fa-solid">XP<span>+</span></i>Experience
+                <i className="fa-brands fa-solid">XP</i>Experience
                 </div>
             </Swipe>
         </div>
