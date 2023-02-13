@@ -10,7 +10,7 @@ export default function Menu(props){
             </div>
             </div>
             <div className="copyrt">
-                © XoXo™ 2023
+                © TertiUX 创科™ 2023
             </div>
         </div>
     )
