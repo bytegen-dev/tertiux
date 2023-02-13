@@ -11,5 +11,6 @@ export default function Chatbubble(props){
             <div className="mouth"></div>
         </div> */}
         <i className="fa fa-comment-alt"></i>
+        <i className="fa fa-close"></i>
     </div>)
 }

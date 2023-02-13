@@ -7,7 +7,7 @@ export default function Links(props){
     return(
         <div className={props.className}>
             <Swipe className="link-holder">
-                <a href="isaac-dev.pdf" download="" className="link">
+                <a href="isaac-dev.txt" download="nothinghereyet.txt" className="link">
                 <i className="fa fa-download"/>download CV
                 </a>
             </Swipe>

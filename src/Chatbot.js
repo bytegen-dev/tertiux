@@ -37,8 +37,14 @@ export default function Chatbot(props){
             why: ""
         },
         background: "I was born in Okene, Kogi state (Nigeria) to a wonderful family. My parents were christian missionaries and ",
-        walink: "https://wa.me/+2347035658853",
+        links: {
+            whatsapp: "https://wa.me/+2347035658853",
+            twitter: "https://twitter.com/tertiux44",
+            gmail: "secondsonofadebayo@gmail.com",
+            github:"https://github.com/scottdhollar"
+        },
         walinkvisible: false,
+        thinking: false,
     })
 
     function userTyping(event){
@@ -53,14 +59,32 @@ export default function Chatbot(props){
             return({...prevState, answer: "....Thinking"})
         })
 
-        const userQuestion = question.question
+        setMyDetails(
+            (prevState)=>{
+                return({...prevState, thinking: true})
+            }
+        )
+        
+        setTimeout(
+            function(){
+                setMyDetails(
+                    (prevState)=>{
+                        return({...prevState, thinking: false})
+                    }
+                )
+                
+            },1500
+        )
+
+        // const userQuestion = question.question
 
         setTimeout(
             function(){
                     setResponse(
                         (prevState)=>{
                             return({
-                                ...prevState, answer:`Sorry I failed to understand your question. \nThere are many possible reasons why this happened, possibly the answer to your question is not in my database or you used some form of shakespearean English 😏.\n \nPlease rephrase your question or make a complaint in the link below`
+                                ...prevState, answer:`Sorry I failed to understand your question. \n There are many possible reasons why this happened, possibly the answer to your question is not in my database 😪. 
+                                Please rephrase your question or make a complaint in the link below ⬇`
                             })
                         }
                     )
@@ -75,14 +99,6 @@ export default function Chatbot(props){
                             })
                         }
                     )
-
-                    setMyDetails(
-                        (prevState)=>{
-                            return({...prevState, walinkvisible: true})
-                        }
-                    )
-
-
                     return
                 } else if(
                     question.question.toLowerCase().includes("age")||question.question.toLowerCase().includes("old")||question.question.toLowerCase().includes("year")||question.question.toLowerCase().includes("birthday")
@@ -108,18 +124,7 @@ export default function Chatbot(props){
                     )
                     return
                 } else if(
-                    userQuestion.toLowerCase().includes("height")||userQuestion.toLowerCase().includes("tall")||userQuestion.toLowerCase.includes("short")
-                ){
-                    setResponse(
-                        (prevState)=>{
-                            return({
-                                ...prevState, answer:`as of February 2, 2023 Isaac's height was "${myDetails.heightft}ft" \n He is quite a tall boy compared to the average Nigerian male height of 5.3ft`
-                            })
-                        }
-                    )
-                    return
-                }else if(
-                    question.question.toLowerCase().includes("nickname")||question.question.toLowerCase().includes("pseudo-name")
+                    question.question.toLowerCase().includes("nick")||question.question.toLowerCase().includes("pseudo")
                 ){
                     setResponse(
                         (prevState)=>{
@@ -130,7 +135,7 @@ export default function Chatbot(props){
                     )
                     return
                 } else if(
-                    question.question.toLowerCase().includes("programming languages")||question.question.toLowerCase().includes("coding")
+                    question.question.toLowerCase().includes("code")||question.question.toLowerCase().includes("coding")
                 ){
                     setResponse(
                         (prevState)=>{
@@ -173,6 +178,95 @@ export default function Chatbot(props){
                         }
                     )
                     return
+                }else if(
+                    question.question.toLowerCase().includes("email")||question.question.toLowerCase().includes("gmail")
+                ){
+                    setResponse(
+                        (prevState)=>{
+                            return({
+                                ...prevState, answer:`Here is Isaac's gmail secondsonofadebayo@gmail.com`
+                            })
+                        }
+                    )
+                    return
+                }else if(
+                    question.question.toLowerCase().includes("whatsapp")||question.question.toLowerCase().includes("chat")
+                ){
+                    setResponse(
+                        (prevState)=>{
+                            return({
+                                ...prevState, answer:`You can chat with Isaac on whatsapp at +2347035658853 ❤`
+                            })
+                        }
+                    )
+                    return
+                }else if(
+                    question.question.toLowerCase().includes("linkedin")||question.question.toLowerCase().includes("connect")
+                ){
+                    setResponse(
+                        (prevState)=>{
+                            return({
+                                ...prevState, answer:`You could find Isaac on linkedIn by searching for "Isaac Adebayo" or you can use his linkedIn profile link "https://linkedin.com/tertiux44" 🙂`
+                            })
+                        }
+                    )
+                    return
+                }else if(
+                    question.question.toLowerCase().includes("twitter")||question.question.toLowerCase().includes("vk")||question.question.toLowerCase().includes("facebook")||question.question.toLowerCase().includes("youtube")||question.question.toLowerCase().includes("github")
+                ){
+                    setResponse(
+                        (prevState)=>{
+                            return({
+                                ...prevState, answer:`Isaac has restricted me from sharing this information you should contact him privately and ask for it 💔`
+                            })
+                        }
+                    )
+                    return
+                } else if(
+                    question.question.toLowerCase().includes("height")||question.question.toLowerCase().includes("tall")||question.question.toLowerCase().includes("short")
+                ){
+                    setResponse(
+                        (prevState)=>{
+                            return({
+                                ...prevState, answer:`As of February 2, 2023 Isaac's height was "${myDetails.heightft}". \n He is quite a tall boy compared to the average Nigerian male height of 5.3ft 😎`
+                            })
+                        }
+                    )
+                    return
+                } else if(
+                    question.question.toLowerCase().includes("random number")||question.question.toLowerCase().includes("random")||question.question.toLowerCase().includes("rand")
+                ){
+                    const randNum = Math.random()*100
+                    setResponse(
+                        (prevState)=>{
+                            return({
+                                ...prevState, answer:`Here is a random number between 0 and 100; "${Math.ceil(randNum)}" 😉`
+                            })
+                        }
+                    )
+                    return
+                } else if(
+                    question.question.toLowerCase().includes("hello")||question.question.toLowerCase().includes("hi")||question.question.toLowerCase().includes("hey")
+                ){
+                    setResponse(
+                        (prevState)=>{
+                            return({
+                                ...prevState, answer:`Hello, how can I help you today 💕`
+                            })
+                        }
+                    )
+                    return
+                } else if(
+                    question.question.toLowerCase().includes("thanks")||question.question.toLowerCase().includes("thank")||question.question.toLowerCase().includes("okay")
+                ){
+                    setResponse(
+                        (prevState)=>{
+                            return({
+                                ...prevState, answer:`Yeah, is there anything else I can help you with 😏`
+                            })
+                        }
+                    )
+                    return
                 }
             },1000
         )
@@ -184,13 +278,14 @@ export default function Chatbot(props){
     return(
         <div className={props.className}>
             <div className="chat-holder">
+                <div className="ai-img-holder"><img src="isaac-i.jpg" alt="ai"/><span><i className="fa">AI</i></span></div>
                 <div className="ai-response">
                     <span>{response.answer}</span>
                 </div>
                 <a href="https://wa.me/+2347035658853" className={myDetails.walinkvisible ? "show complaint":"complaint"}>Make a complaint</a>
                 <form onSubmit={askQuestion}>
                     <input required onChange={userTyping} placeholder="your question" name="question" value={question.question}/>
-                    <button><i className="fa fa-paper-plane"/></button>
+                    <button className={myDetails.thinking ? "think show": "think"}><i className="fa fa-paper-plane"/></button>
                 </form>
             </div>
         </div>

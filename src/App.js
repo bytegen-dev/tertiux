@@ -71,7 +71,7 @@ export default function App(){
         const today = new Date()
             let hour = today.getHours()
             console.log(hour)
-            if (hour > 22 || hour < 7){
+            if (hour > 17 || hour < 7){
                 setUiSettings(
                     (prevState)=>{
                         return({...prevState, darkMode: true})
@@ -80,6 +80,8 @@ export default function App(){
                 return
             }
     }
+
+    
 
     document.addEventListener("contextmenu", (event)=>{
         event.preventDefault()
