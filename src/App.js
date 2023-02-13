@@ -7,7 +7,7 @@ import Menu from "./Menu";
 import AboutBig from "./AboutBig";
 import Preloader from "./Preloader";
 import Chatbubble from "./Chatbubble";
-// import Chatbot from "./Chatbot";
+import Chatbot from "./Chatbot";
 
 export default function App(){
     const [uiSettings, setUiSettings] = React.useState(
@@ -71,7 +71,7 @@ export default function App(){
         const today = new Date()
             let hour = today.getHours()
             console.log(hour)
-            if (hour > 15 || hour < 7){
+            if (hour > 22 || hour < 7){
                 setUiSettings(
                     (prevState)=>{
                         return({...prevState, darkMode: true})
@@ -84,6 +84,20 @@ export default function App(){
     document.addEventListener("contextmenu", (event)=>{
         event.preventDefault()
     })
+
+    const [chatbotSettings, SetChatbot] = React.useState({
+        visible: false
+    })
+
+    function openChatbot(){
+        SetChatbot(
+            (prevState)=>{
+                return({
+                    ...prevState, visible: !prevState.visible
+                })
+            }
+        )
+    }
 
 
 //   const openSwipeMenu = () => {
@@ -107,11 +121,11 @@ export default function App(){
             <Links className="links"/>
             <Subscription className="subscription"/>
             <Preloader className="preloader"/>
-            <Chatbubble className="chatbubble"/>
+            <Chatbubble className={chatbotSettings.visible ? "chatbubble show" : "chatbubble"} onClick={openChatbot}/>
             <Menu darkMode={uiSettings.darkMode} isOpen={isOpen} swipeUp={menuToggleX} className={uiSettings.showMenu?"show menu":"menu"} onClick={toggleDarkMode}/>
             <div onClick={menuToggleX} className={uiSettings.showMenu ? "show backdrop" : "backdrop"}></div>
             <AboutBig onPrev={aboutBig} className={uiSettings.showAboutBig ? "show about-bigger" : "about-bigger"}/>
-            {/* <Chatbot className="chatbot"/> */}
+            <Chatbot className={chatbotSettings.visible ? "chatbot show" : "chatbot"}/>
         </div>
     )
 }

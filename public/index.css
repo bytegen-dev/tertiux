@@ -772,6 +772,10 @@ body{
     transition: all 0.5s ease;
 }
 
+.show.chatbubble{
+
+}
+
 .chatbubble:hover{
     background-color: #000623;
 }
@@ -800,19 +804,84 @@ body{
     background-color: rgba(243, 236, 242, 0.854);
     z-index: 8;
     backdrop-filter: blur(10px);
-    padding: 10px;
+    padding: 20px;
     box-shadow: 0px 0px 100px rgba(35, 0, 36, 0.3);
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 0;
+    scale: 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
+}
+
+.show.chatbot{
+    opacity: 1;
+    scale: 1;
+    visibility: visible;
 }
 
 .chatbot .chat-holder{
     width: 100%;
     height: 100%;
-    color: rgba(77, 0, 73, 0.163);
-    border: 3px solid;
-    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.chat-holder .ai-response{
+    width: 100%;
+    height: 100%;
+    /* border: 2px solid; */
+    padding: 10px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    color: rgb(61, 18, 58);
+}
+
+.chat-holder form{
+    width: 100%;
+    height: 60px;
+    /* height: 50%; */
+    box-shadow: 0px 0px 10px #0003;
+    /* border: 2px solid rgb(61, 18, 58); */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 40px;
+    overflow: hidden;
+}
+
+.chat-holder form input{
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    color: rgb(61, 18, 58);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    overflow-y: hidden;
+    overflow-x: scroll;
+}
+
+.chat-holder form input:hover, .chat-holder form input:focus{
+    /* border: 2px solid green; */
+}
+
+.chat-holder form button{
+    height: 100%;
+    width: 60px;
+    background-color: rgb(61, 18, 58);
+    border: none;
+    color: #fff;
+    transition: all 05s ease;
+}
+
+.chat-holder form button:hover{
+    opacity: 0.7;
 }
 
 /* chatbot ends here */

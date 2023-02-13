@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function Chatbubble(props){
-    return (<div className={props.className}>
+    return (<div className={props.className} onClick={props.onClick}>
         {/* <div className="emoji">
             <div className="eyes">
                 <div className="eye i"></div>
