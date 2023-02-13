@@ -46,7 +46,7 @@ body{
 }
 
 .dark.container{
-    background-color: rgb(26, 23, 26);
+    background-color: rgb(28, 22, 28);
 }
 
 .container.nooverflow{
@@ -510,7 +510,9 @@ body{
         /* flex-direction: row-reverse; */
         background-color: rgb(245, 230, 243);
         color: rgb(26, 23, 26);
-        /* border-color: #7a6a7a; */
+        color: rgb(245, 230, 243);
+        background-color: transparent;
+        border-color: #7a6a7a;
     }
 
     .dark .links .link i{
