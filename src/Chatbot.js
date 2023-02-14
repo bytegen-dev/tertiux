@@ -36,7 +36,7 @@ export default function Chatbot(props){
             name: "Tertiux",
             why: ""
         },
-        background: "I was born in Okene, Kogi state (Nigeria) to a wonderful family. My parents were christian missionaries and ",
+        background: "Isaac was born in Okene, Kogi state (Nigeria) to a wonderful family. My parents were christian missionaries and Isaac was born in Okene, Kogi state (Nigeria) to a wonderful family. My parents were christian missionaries and Isaac was born in Okene, Kogi state (Nigeria) to a wonderful family. My parents were christian missionaries and Isaac was born in Okene, Kogi state (Nigeria) to a wonderful family. My parents were christian missionaries and Isaac was born in Okene, Kogi state (Nigeria) to a wonderful family. My parents were christian missionaries and Isaac was born in Okene, Kogi state (Nigeria) to a wonderful family. My parents were christian missionaries and Isaac was born in Okene, Kogi state (Nigeria) to a wonderful family. My parents were christian missionaries and Isaac was born in Okene, Kogi state (Nigeria) to a wonderful family. My parents were christian missionaries and Isaac was born in Okene, Kogi state (Nigeria) to a wonderful family. My parents were christian missionaries and Isaac was born in Okene, Kogi state (Nigeria) to a wonderful family. My parents were christian missionaries and Isaac was born in Okene, Kogi state (Nigeria) to a wonderful family. My parents were christian missionaries and Isaac was born in Okene, Kogi state (Nigeria) to a wonderful family. My parents were christian missionaries and Isaac was born in Okene, Kogi state (Nigeria) to a wonderful family. My parents were christian missionaries and Isaac was born in Okene, Kogi state (Nigeria) to a wonderful family. My parents were christian missionaries and ",
         links: {
             whatsapp: "https://wa.me/+2347035658853",
             twitter: "https://twitter.com/tertiux44",
@@ -90,7 +90,29 @@ export default function Chatbot(props){
                     )
 
                 if(
-                    question.question.toLowerCase().includes("fuck")||question.question.toLowerCase().includes("shit")||question.question.toLowerCase().includes("damn")||question.question.toLowerCase().includes("fool")||question.question.toLowerCase().includes("stupid")||question.question.toLowerCase().includes("hate")||question.question.toLowerCase().includes("ass")||question.question.toLowerCase().includes("dick")||question.question.toLowerCase().includes("pussy")||question.question.toLowerCase().includes("cunt")||question.question.toLowerCase().includes("sex")||question.question.toLowerCase().includes("porn")||question.question.toLowerCase().includes("boobs")||question.question.toLowerCase().includes("threesome")||question.question.toLowerCase().includes("xvideos")||question.question.toLowerCase().includes("xnxx")||question.question.toLowerCase().includes("pornhub")||question.question.toLowerCase().includes("onlyfans")||question.question.toLowerCase().includes("bangbros")
+                    question.question.toLowerCase().includes("who are you")||question.question.toLowerCase().includes("describe you")||question.question.toLowerCase().includes("what are you")||question.question.toLowerCase().includes("about you")||question.question.toLowerCase().includes("biography you")||question.question.toLowerCase().includes("nationality")||question.question.toLowerCase().includes("state")||question.question.toLowerCase().includes("hometown")||question.question.toLowerCase().includes("family")||question.question.toLowerCase().includes("siblings")||question.question.toLowerCase().includes("brothers")||question.question.toLowerCase().includes("sisters")
+                ){
+                    setResponse(
+                        (prevState)=>{
+                            return({
+                                ...prevState, answer:`I am a chatbot made by Isaac Adebayo ❤ for his mini-portfolio website. Isaac made me to give users like you basic information about himself. He is making me more advanced daily and his ultimate desire is to make me just like him 😎`
+                            })
+                        }
+                    )
+                    return
+                } else if(
+                    question.question.toLowerCase().includes("who is isaac")||question.question.toLowerCase().includes("describe isaac")||question.question.toLowerCase().includes("background")||question.question.toLowerCase().includes("about isaac")||question.question.toLowerCase().includes("biography")
+                ){
+                    setResponse(
+                        (prevState)=>{
+                                return({
+                                ...prevState, answer:`${myDetails.background}`
+                            })
+                        }
+                    )
+                    return
+                } else if(
+                    question.question.toLowerCase().includes("fuck")||question.question.toLowerCase().includes("shit")||question.question.toLowerCase().includes("damn")||question.question.toLowerCase().includes("fool")||question.question.toLowerCase().includes("stupid")||question.question.toLowerCase().includes("hate")||question.question.toLowerCase().includes("ass")||question.question.toLowerCase().includes("dick")||question.question.toLowerCase().includes("pussy")||question.question.toLowerCase().includes("cunt")||question.question.toLowerCase().includes("sex")||question.question.toLowerCase().includes("porn")||question.question.toLowerCase().includes("boobs")||question.question.toLowerCase().includes("threesome")||question.question.toLowerCase().includes("xvideos")||question.question.toLowerCase().includes("xnxx")||question.question.toLowerCase().includes("pornhub")||question.question.toLowerCase().includes("onlyfans")||question.question.toLowerCase().includes("bangbros")||question.question.toLowerCase().includes("bitch")
                 ){
                     setResponse(
                         (prevState)=>{
@@ -134,19 +156,8 @@ export default function Chatbot(props){
                         }
                     )
                     return
-                } else if(
-                    question.question.toLowerCase().includes("code")||question.question.toLowerCase().includes("coding")
-                ){
-                    setResponse(
-                        (prevState)=>{
-                            return({
-                                ...prevState, answer:` presently Isaac is proficient in the following Programming Languages: "${myDetails.topProgLanguages}" 😉`
-                            })
-                        }
-                    )
-                    return
                 }else if(
-                    question.question.toLowerCase().includes("languages")||question.question.toLowerCase().includes("speak")
+                    question.question.toLowerCase().includes("language speak")||question.question.toLowerCase().includes("language native")
                 ){
                     setResponse(
                         (prevState)=>{
@@ -157,7 +168,18 @@ export default function Chatbot(props){
                     )
                     return
                 } else if(
-                    question.question.toLowerCase().includes("single")||question.question.toLowerCase().includes("married")||question.question.toLowerCase().includes("marital")
+                    question.question.toLowerCase().includes("code")||question.question.toLowerCase().includes("programming language")
+                    ){
+                        setResponse(
+                            (prevState)=>{
+                                return({
+                                ...prevState, answer:` presently Isaac is proficient in the following Programming Languages: "${myDetails.topProgLanguages}" 😉`
+                            })
+                        }
+                    )
+                    return
+                } else if(
+                    question.question.toLowerCase().includes("single")||question.question.toLowerCase().includes("married")||question.question.toLowerCase().includes("marital")||question.question.toLowerCase().includes("isaac love")||question.question.toLowerCase().includes("girl friend")||question.question.toLowerCase().includes("boyfriend")||question.question.toLowerCase().includes("best friend")
                 ){
                     setResponse(
                         (prevState)=>{
@@ -168,12 +190,12 @@ export default function Chatbot(props){
                     )
                     return
                 } else if(
-                    question.question.toLowerCase().includes("game")||question.question.toLowerCase().includes("hobby")||question.question.toLowerCase().includes("games")||question.question.toLowerCase().includes("video-games")||question.question.toLowerCase().includes("spare time")||question.question.toLowerCase().includes("fifa")||question.question.toLowerCase().includes("efootball")||question.question.toLowerCase().includes("chess")
+                    question.question.toLowerCase().includes("game")||question.question.toLowerCase().includes("hobby")||question.question.toLowerCase().includes("games")||question.question.toLowerCase().includes("video-games")||question.question.toLowerCase().includes("spare time")||question.question.toLowerCase().includes("fifa")||question.question.toLowerCase().includes("efootball")||question.question.toLowerCase().includes("chess")||question.question.toLowerCase().includes("friend")
                 ){
                     setResponse(
                         (prevState)=>{
                             return({
-                                ...prevState, answer:`Isaac has a very good timetable for his activities and has included time for exercises, gaming and watching movies`
+                                ...prevState, answer:`Isaac has a very good timetable for his activities and has included time for exercises, gaming, watching movies and hanging out with close friends 😉`
                             })
                         }
                     )
@@ -190,7 +212,7 @@ export default function Chatbot(props){
                     )
                     return
                 }else if(
-                    question.question.toLowerCase().includes("whatsapp")||question.question.toLowerCase().includes("chat")
+                    question.question.toLowerCase().includes("whatsapp")||question.question.toLowerCase().includes("chat")||question.question.toLowerCase().includes("call")
                 ){
                     setResponse(
                         (prevState)=>{
@@ -257,7 +279,7 @@ export default function Chatbot(props){
                     )
                     return
                 } else if(
-                    question.question.toLowerCase().includes("thanks")||question.question.toLowerCase().includes("thank")||question.question.toLowerCase().includes("okay")
+                    question.question.toLowerCase().includes("thanks")||question.question.toLowerCase().includes("thank")||question.question.toLowerCase().includes("okay")||question.question.toLowerCase().includes("love you")||question.question.toLowerCase().includes("you're the best")||question.question.toLowerCase().includes("you the best")
                 ){
                     setResponse(
                         (prevState)=>{

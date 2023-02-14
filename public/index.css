@@ -144,6 +144,7 @@ body{
     letter-spacing: 1px;
     font-weight: 600;
     transition: all 0.5s ease;
+    cursor: pointer;
 }
 
 .dark .navbar .gotosubscription{
@@ -278,7 +279,7 @@ body{
         position: relative;
         margin: 40px 0;
     }
-
+    
     .role-holder::before{
         content: "";
         position: absolute;
@@ -290,6 +291,7 @@ body{
         bottom: -40px;
         animation: before 1s ease forwards;
         animation-delay: 20s;
+        animation-play-state: paused;
     }
 
     .dark .role-holder::before{
@@ -297,6 +299,10 @@ body{
         opacity: 0.5;
     }
 
+    .role-holder.play-animation::before{
+        animation-play-state: running;
+    }
+    
     @keyframes before {
         0%{}
         100%{
@@ -316,9 +322,13 @@ body{
         animation: role 1s ease forwards;
         animation-delay: 20s;
         text-transform: capitalize;
+        animation-play-state: paused;
     }
 
 
+    .role-holder.play-animation .role{
+        animation-play-state: running;
+    }
 
     .dark .about .role-holder .role{
         border-color: rgb(246, 242, 245);
@@ -356,13 +366,18 @@ body{
         height: 100%;
         animation: languages 1s ease forwards;
         animation-delay: 20s;
+        animation-play-state: paused;
         /* overflow-y: hidden; */
+    }
+
+    .about .role-holder.play-animation .languages{
+        animation-play-state: running;
     }
 
     .dark .about .role-holder .languages{
         border-left-color: rgb(246, 242, 245);
     }
-
+    
     @keyframes languages {
         0%{
             width: 100%;
@@ -385,54 +400,65 @@ body{
     .dark .role-holder .languages .language{
         color: rgb(181, 124, 172);
     }
-
+    
     
     .about .role-holder .languages .language.active{
+        opacity: 0;
         animation: skills 2s ease forwards;
+        animation-play-state: paused;
     }
-
+    
     .about .role-holder .languages .language.i{
         animation: skills 2s ease forwards;
         animation-delay: 2s;
+        animation-play-state: paused;
     }
     .about .role-holder .languages .language.ii{
         animation: skills 2s ease forwards;
         animation-delay: 4s;
+        animation-play-state: paused;
     }
-
+    
     .about .role-holder .languages .language.iii{
         animation: skills 2s ease forwards;
         animation-delay: 6s;
+        animation-play-state: paused;
     }
-
+    
     .about .role-holder .languages .language.iv{
         animation: skills 2s ease forwards;
         animation-delay: 8s;
+        animation-play-state: paused;
     }
-
+    
     .about .role-holder .languages .language.iv{
         animation: skills 2s ease forwards;
         animation-delay: 10s;
+        animation-play-state: paused;
     }
-
+    
     .about .role-holder .languages .language.v{
         animation: skills 2s ease forwards;
         animation-delay: 12s;
+        animation-play-state: paused;
     }
-
+    
     .about .role-holder .languages .language.vi{
         animation: skills 2s ease forwards;
         animation-delay: 14s;
+        animation-play-state: paused;
     }
-
+    
     .about .role-holder .languages .language.vii{
         animation: skills 2s ease forwards;
         animation-delay: 16s;
+        animation-play-state: paused;
     }
-
+    
     .about .role-holder .languages .language.viii{
         animation: skills 2s ease forwards;
         animation-delay: 18s;
+        animation-play-state: paused;
     }
     
     @keyframes skills {
@@ -449,6 +475,10 @@ body{
             transform: translateY(-30px);
             opacity: 0;
         }
+    }
+
+    .about .role-holder .languages .language.play-animation{
+        animation-play-state: running;
     }
 
 /* About style ends here */
@@ -543,7 +573,7 @@ body{
     width: 100%;
     height: 100%;
     position: fixed;
-    z-index: 6;
+    z-index: 10;
     background-color: #000c;
     backdrop-filter: blur(10px);
     display: flex;
@@ -610,6 +640,7 @@ body{
     top: 20px;
     left: 20px;
     color: rgb(245, 230, 243);
+    cursor: pointer;
 }
 
 /* About bigger styles ends here */
@@ -622,12 +653,16 @@ body{
     height: 100%;
     top: 0;
     left: 0;
-    z-index: 10;
-    background-color: #000c;
+    z-index: 11;
+    background-color: rgba(9, 6, 8, 0.8);
     opacity: 0;
     visibility: hidden;
     transition: all 0.5s ease;
     backdrop-filter: blur(10px);
+}
+
+.dark .backdrop{
+    
 }
 
 .show.backdrop{
@@ -645,7 +680,7 @@ body{
     width: 100%;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
-    z-index: 11;
+    z-index: 12;
     background-color: rgb(245, 230, 243);
     transition: all 0.5s ease;
     transform: translateY(100%);
@@ -713,6 +748,7 @@ body{
     align-items: center;
     justify-content: center;
     transition: all 0.5s ease;
+    cursor: pointer;
 }
 
 .menu .menu-holder .toggle.active{
@@ -986,18 +1022,22 @@ body{
     opacity: 1;
     visibility: visible;
     display: flex;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     position: fixed;
     z-index: 30;
     top: 0;
     left: 0;
-    background-color: #ffffffef;
+    background-color: #ede1eeef;
     backdrop-filter: blur(10px);
     display: flex;
     justify-content: center;
     align-items: center;
-    display: none;
+    /* display: none; */
+}
+
+.dark .preloader{
+    background-color: #000000ef;
 }
 
 .preloader-circle{
@@ -1010,6 +1050,95 @@ body{
     animation: preloader 0.5s linear forwards infinite;
 }
 
+.dark .preloader-circle{
+    border-color: rgb(235, 228, 234);
+}
+
+.toolong{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    width: 100%;
+    height: 150px;
+    transition: all 1s ease;
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    /* transform: translateY(-100%); */
+    animation: 1s ease toolongload forwards;
+    animation-delay: 10s;
+    opacity: 0;
+}
+
+.toolong.hide{
+    animation: none;
+    animation: 1s ease toolongloadx forwards;
+}
+
+@keyframes toolongload {
+    0%{
+        /* transform: translateY(-100%); */
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes toolongloadx {
+    0%{
+        /* transform: translateY(0); */
+    }
+    100%{
+        transform: translateY(-100%);
+    }
+}
+
+.toolong button{
+    border: none;
+    background-color: rgb(188, 0, 0);
+    color: #fff;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px #000;
+    font-weight: 550;
+    letter-spacing: 1px;
+    animation: bounce-btn 1s ease forwards infinite alternate;
+}
+
+@keyframes bounce-btn {
+    0%{
+
+    }
+    100%{
+        transform: translateY(10px);
+    }
+}
+
+.toolong > div{
+    background-color: rgb(29, 7, 28);
+    width: 100%;
+    height: 100%;
+    max-width: 300px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 20px #0008;
+    color: #fff;
+}
+
+.dark .toolong > div{
+    background-color: #f1e6f1;
+    border: 3px solid rgb(243, 236, 242);
+    /* color: rgb(61, 18, 58); */
+    background-color: transparent;
+}
+
+
 @keyframes preloader {
     0%{
         transform: rotate(-700deg);
@@ -1017,10 +1146,116 @@ body{
     100%{}
 }
 
+.hide.preloader{
+    animation: hide-preloader 0.5s ease forwards;
+}
+
+
+@keyframes hide-preloader {
+    0%{}
+    100%{
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
 /* preloader ends here */
 
 @media screen and (min-width: 600px) {
+    #root{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* width: 400px;
+        height: 400px; */
+        overflow: hidden;
+        border: 4px solid;
+        position: relative;
+        /* scale: 1; */
+        transform: scale(1) !important;
+        height: 80%;
+        width: 80%;
+        max-width: 400px;
+        max-height: 800px;
+        border-radius: 40px;
+        box-shadow: 0px 0px 10px #0007;
+        backdrop-filter: blur(10px);
+    }
+
+
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #000;
+        background-image: linear-gradient(transparent,rgba(31, 1, 53, 0.627), rgb(17, 0, 29)), url(isaac-i.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    
+
+    .about .hero h1{
+        font-size: 25px !important;
+    }
+
+    .about .role-holder{
+        width: 100%;
+    }
+
+    .about .role-holder .role h3{
+        font-size: 14px;
+    }
+
+    button{
+        cursor: pointer;
+    }
+
+    .chatbubble{
+        width: 60px;
+        height: 60px;
+    }
+
+    .show.chatbubble{
+        transform: translateX(-130px);
+    }
+
     .container{
-        opacity: 0 !important;
+        /* position: relative; */
+    }
+}
+
+@media screen and (max-height: 400px) {
+    #root{
+        display: none;
+    }
+    
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #000;
+        background-image: linear-gradient(transparent, indigo), url(isaac-i.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+@media screen and (max-width: 270px) {
+    #root{
+        display: none;
+    }
+
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #000;
+        background-image: linear-gradient(transparent, indigo), url(isaac-i.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
     }
 }

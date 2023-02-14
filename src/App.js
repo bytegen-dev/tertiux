@@ -8,6 +8,7 @@ import AboutBig from "./AboutBig";
 import Preloader from "./Preloader";
 import Chatbubble from "./Chatbubble";
 import Chatbot from "./Chatbot";
+// import Toolong from "./Toolong";
 
 export default function App(){
     const [uiSettings, setUiSettings] = React.useState(
@@ -70,7 +71,7 @@ export default function App(){
     function darkModeTotal(){
         const today = new Date()
             let hour = today.getHours()
-            console.log(hour)
+            // console.log(hour)
             if (hour > 17 || hour < 7){
                 setUiSettings(
                     (prevState)=>{
@@ -101,13 +102,44 @@ export default function App(){
         )
     }
 
+    const [toolongtoload, settoolongtoload] = React.useState(true)
 
-//   const openSwipeMenu = () => {
-//   };
+    function showAnimation(){
+        setTimeout(
+            function(){
+                const lang = document.querySelectorAll(".language")
+                lang.forEach((language)=>{
+                    language.classList.add("play-animation")
+                })
+                const preloader = document.querySelector(".preloader")
+                const roleHolder = document.querySelector(".role-holder")
+                roleHolder.classList.add("play-animation")
+                preloader.classList.add("hide")
+                console.log("loaded")
+                settoolongtoload(false)
+            }, 500
+        )
+    }
 
-//   const closeSwipeMenu = () => {
-//     setIsOpen(false);
-//   };
+    function closeToolong(){
+        // settoolongtoload(false)
+        showAnimation()
+    }
+
+    // function defaultcloseTooLong(){
+    //     if(toolongtoload === true){
+    //         settoolongtoload(false)
+    //         console.log("toolongtoload")
+    //     }
+    // }
+    
+    window.addEventListener("load", showAnimation)
+
+    // React.useEffect(
+    //     function(){
+    //     }, []
+    // )
+
     React.useEffect(
         function(){
             darkModeTotal()
@@ -122,7 +154,7 @@ export default function App(){
             <About className="about"/>
             <Links className="links"/>
             <Subscription className="subscription"/>
-            <Preloader className="preloader"/>
+            <Preloader className="preloader" onClick={closeToolong} takeTime={toolongtoload}/>
             <Chatbubble className={chatbotSettings.visible ? "chatbubble show" : "chatbubble"} onClick={openChatbot}/>
             <Menu darkMode={uiSettings.darkMode} isOpen={isOpen} swipeUp={menuToggleX} className={uiSettings.showMenu?"show menu":"menu"} onClick={toggleDarkMode}/>
             <div onClick={menuToggleX} className={uiSettings.showMenu ? "show backdrop" : "backdrop"}></div>
