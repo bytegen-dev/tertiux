@@ -132,7 +132,9 @@ export default function App(){
     
     React.useEffect(
         function(){
-            window.addEventListener("load", showAnimation)
+            setTimeout(
+                showAnimation, 3000
+            )
         }, []
     )
 
