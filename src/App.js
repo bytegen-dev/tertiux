@@ -105,21 +105,17 @@ export default function App(){
     const [toolongtoload, settoolongtoload] = React.useState(true)
 
     function showAnimation(){
-        setTimeout(
-            function(){
-                const lang = document.querySelectorAll(".language")
-                lang.forEach((language)=>{
-                    language.classList.add("play-animation")
-                })
-                const preloader = document.querySelector(".preloader")
-                const roleHolder = document.querySelector(".role-holder")
-                roleHolder.classList.add("play-animation")
-                preloader.classList.add("hide")
-                console.log("loaded")
-                settoolongtoload(false)
-            }, 500
-        )
-    }
+            const lang = document.querySelectorAll(".language")
+            lang.forEach((language)=>{
+                language.classList.add("play-animation")
+            })
+            const preloader = document.querySelector(".preloader")
+            const roleHolder = document.querySelector(".role-holder")
+            roleHolder.classList.add("play-animation")
+            preloader.classList.add("hide")
+            console.log("loaded")
+            settoolongtoload(false)
+        }
 
     function closeToolong(){
         // settoolongtoload(false)
@@ -133,12 +129,12 @@ export default function App(){
     //     }
     // }
     
-    window.addEventListener("load", showAnimation)
-
-    // React.useEffect(
-    //     function(){
-    //     }, []
-    // )
+    
+    React.useEffect(
+        function(){
+            window.addEventListener("load", showAnimation)
+        }, []
+    )
 
     React.useEffect(
         function(){

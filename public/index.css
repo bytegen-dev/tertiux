@@ -1133,7 +1133,7 @@ body{
 
 .dark .toolong > div{
     background-color: #f1e6f1;
-    border: 3px solid rgb(243, 236, 242);
+    border: 2px solid rgba(243, 236, 242, 0.465);
     /* color: rgb(61, 18, 58); */
     background-color: transparent;
 }
@@ -1226,7 +1226,7 @@ body{
     }
 }
 
-@media screen and (max-height: 400px) {
+@media screen and (max-height: 100px) {
     #root{
         display: none;
     }
@@ -1243,7 +1243,7 @@ body{
     }
 }
 
-@media screen and (max-width: 270px) {
+@media screen and (max-width: 200px) {
     #root{
         display: none;
     }
