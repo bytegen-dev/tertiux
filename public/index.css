@@ -864,8 +864,8 @@ body{
     justify-content: center;
     align-items: center;
     opacity: 0;
-    /* scale: 0; */
-    transform: scale(0);
+    scale: 0;
+    /* transform: scale(0); */
     visibility: hidden;
     transition: all 0.5s ease;
 }
@@ -906,8 +906,8 @@ body{
 
 .show.chatbot{
     opacity: 1;
-    /* scale: 1; */
-    transform: scale(1);
+    scale: 1;
+    /* transform: scale(1); */
     visibility: visible;
 }
 
