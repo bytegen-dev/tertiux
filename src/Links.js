@@ -12,8 +12,8 @@ export default function Links(props){
                 </a>
             </Swipe>
             <Swipe className="link-holder">
-                <a href="https://tertiux-dev.netlify.app/projects" className="link">
-                <i className="fa fa-link"/>My projects
+                <a href="https://github.com/scottdhollar" className="link">
+                <i className="fa-brands fa-github"/>My projects
                 </a>
             </Swipe>
             <Swipe className="link-holder">
