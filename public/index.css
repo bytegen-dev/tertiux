@@ -827,17 +827,17 @@ body{
 
 .chatbubble i.fa-close{
     opacity: 0;
-    transform: scale(0);
+    scale: 0;
 }
 
 .show.chatbubble i.fa-comment-alt{
     opacity: 0;
-    transform: scale(0);
+    scale: 0;
 }
 
 .show.chatbubble i.fa-close{
     opacity: 1;
-    transform: scale(1);
+    scale: 1;
 }
 
 /* chatbubble ends here */
@@ -864,7 +864,8 @@ body{
     justify-content: center;
     align-items: center;
     opacity: 0;
-    scale: 0;
+    /* scale: 0; */
+    transform: scale(0);
     visibility: hidden;
     transition: all 0.5s ease;
 }
@@ -905,7 +906,8 @@ body{
 
 .show.chatbot{
     opacity: 1;
-    scale: 1;
+    /* scale: 1; */
+    transform: scale(1);
     visibility: visible;
 }
 
@@ -1068,7 +1070,7 @@ body{
     align-items: center;
     /* transform: translateY(-100%); */
     animation: 1s ease toolongload forwards;
-    animation-delay: 10s;
+    animation-delay: 5s;
     opacity: 0;
 }
 

@@ -12,12 +12,12 @@ export default function Links(props){
                 </a>
             </Swipe>
             <Swipe className="link-holder">
-                <a href="https://isaac-projects.netlify.app" className="link">
+                <a href="https://tertiux-dev.netlify.app/projects" className="link">
                 <i className="fa fa-link"/>My projects
                 </a>
             </Swipe>
             <Swipe className="link-holder">
-                <a href="https://linkedin.com/tertiux44" className="link">
+                <a href="https://www.linkedin.com/in/tertiux44" className="link">
                     <i className="fa-brands fa-linkedin"/> linkedIn
                 </a>
             </Swipe>
@@ -27,8 +27,8 @@ export default function Links(props){
                 </a>
             </Swipe>
             <Swipe className="link-holder">
-                <a href="https://isaac-experience.netlify.app" className="link">
-                <i className="fa-brands fa-solid">XP</i>Experience
+                <a href="https://twitter.com/tertiux44" className="link xp">
+                <i className="fa-brands fa-twitter"></i>Twitter
                 </a>
             </Swipe>
         </div>
