@@ -148,13 +148,13 @@ export default function App(){
 
     return(
         <div className={uiSettings.darkMode ? "container dark" : "container"}>
-            <Navbar className="navbar" onNextii={aboutBig} onNext={menuToggle}/>
+            <Navbar className={uiSettings.showMenu ? "navbar show" : "navbar"} onNextii={aboutBig} onNext={menuToggle}/>
             <About className="about"/>
             <Links className="links"/>
             <Subscription className="subscription"/>
             <Preloader className="preloader" onClick={closeToolong} takeTime={toolongtoload}/>
             <Chatbubble className={chatbotSettings.visible ? "chatbubble show" : "chatbubble"} onClick={openChatbot}/>
-            <Menu darkMode={uiSettings.darkMode} isOpen={isOpen} swipeUp={menuToggleX} className={uiSettings.showMenu?"show menu":"menu"} onClick={toggleDarkMode}/>
+            <Menu darkMode={uiSettings.darkMode} isOpen={isOpen} swipeDown={menuToggleX} className={uiSettings.showMenu?"show menu":"menu"} onClick={toggleDarkMode}/>
             <div onClick={menuToggleX} className={uiSettings.showMenu ? "show backdrop" : "backdrop"}></div>
             <AboutBig onPrev={aboutBig} className={uiSettings.showAboutBig ? "show about-bigger" : "about-bigger"}/>
             <Chatbot className={chatbotSettings.visible ? "chatbot show" : "chatbot"}/>

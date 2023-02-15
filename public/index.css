@@ -125,7 +125,7 @@ body{
     transform: translateX(-10px);
 }
 
-.navbar .hamburger:hover{
+.navbar.show .hamburger{
     transform: rotate(90deg);
 }
 
