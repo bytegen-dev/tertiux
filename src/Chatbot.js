@@ -306,7 +306,7 @@ export default function Chatbot(props){
                 </div>
                 <a href="https://wa.me/+2347035658853" className={myDetails.walinkvisible ? "show complaint":"complaint"}>Make a complaint</a>
                 <form onSubmit={askQuestion}>
-                    <input required onChange={userTyping} placeholder="your question" name="question" value={question.question}/>
+                    <input required onChange={userTyping} placeholder="Ask about Isaac" name="question" value={question.question}/>
                     <button className={myDetails.thinking ? "think show": "think"}><i className="fa fa-paper-plane"/></button>
                 </form>
             </div>
