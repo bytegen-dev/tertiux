@@ -408,7 +408,7 @@ body{
     
     .about .role-holder .languages .language.active{
         opacity: 0;
-        animation: skills 2s ease forwards;
+        animation: skillsx 2s ease forwards;
         animation-play-state: paused;
     }
     
@@ -473,6 +473,23 @@ body{
         50%{
           opacity: 1;
           transform: translateY(0);
+        }
+        
+        100%{
+            transform: translateY(-30px);
+            opacity: 0;
+        }
+    }
+
+    @keyframes skillsx {
+        0%{
+            /* opacity: 0; */
+            opacity: 1;transform: translateY(0);
+        }
+        
+        50%{
+          /* transform: translateY(0); */
+          opacity: 1;transform: translateY(0);
         }
         
         100%{
