@@ -537,6 +537,18 @@ body{
         position: relative !important;
     }
 
+    .link-holder {
+        opacity: 0;
+        transform: translateX(-20px);
+        /* transition: opacity 0.5s, transform 0.5s; */
+    }
+      
+    .link-holder.visible {
+        opacity: 1;
+        transform: translateX(0);
+    }
+      
+
     .dark .links .link-holder{
         padding: 20px 0;
     }
