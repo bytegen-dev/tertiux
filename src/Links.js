@@ -2,7 +2,6 @@ import React from "react";
 import Swipe from "react-swipe"
 
 export default function Links(props) {
-    const [isVisible, setIsVisible] = React.useState(false);
   
     React.useEffect(() => {
       const handleScroll = () => {

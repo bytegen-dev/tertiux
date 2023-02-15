@@ -1188,10 +1188,36 @@ body{
     }
 }
 
+.orientation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    color: indigo;
+    z-index: 20;
+    flex-direction: column;
+    gap: 40px;
+    display: none;
+}
 
-@media screen and (max-height: 100px) {
-    #root{
-        display: none;
+.dark .orientation{
+    background-color: #000;
+    color: #fff;
+}
+
+.orientation i{
+    font-size: 40px;
+}
+
+
+@media screen and (max-height: 200px) and (min-width: 400px) {
+    .orientation{
+        display: flex;
     }
     
     body{
@@ -1206,7 +1232,7 @@ body{
     }
 }
 
-@media screen and (max-width: 200px) {
+@media screen and (max-width: 100px) {
     #root{
         display: none;
     }

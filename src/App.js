@@ -8,6 +8,7 @@ import AboutBig from "./AboutBig";
 import Preloader from "./Preloader";
 import Chatbubble from "./Chatbubble";
 import Chatbot from "./Chatbot";
+import Orientation from "./Orientation";
 // import Toolong from "./Toolong";
 
 export default function App(){
@@ -158,6 +159,7 @@ export default function App(){
             <div onClick={menuToggleX} className={uiSettings.showMenu ? "show backdrop" : "backdrop"}></div>
             <AboutBig onPrev={aboutBig} className={uiSettings.showAboutBig ? "show about-bigger" : "about-bigger"}/>
             <Chatbot className={chatbotSettings.visible ? "chatbot show" : "chatbot"}/>
+            <Orientation className="orientation"/>
         </div>
     )
 }
