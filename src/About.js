@@ -2,7 +2,144 @@ import React from "react";
 
 export default function About(props){
     const dev = "</>"
+
+    const [devDetails, setDevDetails] = React.useState(
+        {
+            name: "",
+            role: "Frontend Developer",
+        }
+    )
+
+    function happyDev(){
+        setDevDetails(
+            function(prevState){
+                return({...prevState, name: "I"})
+            }
+        )
+        
+        setTimeout(
+            function(){
+                setDevDetails(
+                    function(prevState){
+                        return({...prevState, name: "Is"})
+                    }
+                )
+            }, 100
+        )
+
+        setTimeout(
+            function(){
+                setDevDetails(
+                    function(prevState){
+                        return({...prevState, name: "Isa"})
+                    }
+                )
+            }, 200
+        )
+
+        setTimeout(
+            function(){
+                setDevDetails(
+                    function(prevState){
+                        return({...prevState, name: "Isaa"})
+                    }
+                )
+            }, 300
+        )
+
+        setTimeout(
+            function(){
+                setDevDetails(
+                    function(prevState){
+                        return({...prevState, name: "Isaac"})
+                    }
+                )
+            }, 400
+        )
+
+        setTimeout(
+            function(){
+                setDevDetails(
+                    function(prevState){
+                        return({...prevState, name: "Isaac "})
+                    }
+                )
+            }, 500
+        )
+
+        setTimeout(
+            function(){
+                setDevDetails(
+                    function(prevState){
+                        return({...prevState, name: "Isaac A"})
+                    }
+                )
+            }, 600
+        )
+        setTimeout(
+            function(){
+                setDevDetails(
+                    function(prevState){
+                        return({...prevState, name: "Isaac Ad"})
+                    }
+                )
+            }, 700
+        )
+
+        setTimeout(
+            function(){
+                setDevDetails(
+                    function(prevState){
+                        return({...prevState, name: "Isaac Ade"})
+                    }
+                )
+            }, 800
+        )
+        setTimeout(
+            function(){
+                setDevDetails(
+                    function(prevState){
+                        return({...prevState, name: "Isaac Adeb"})
+                    }
+                )
+            }, 900
+        )
+        setTimeout(
+            function(){
+                setDevDetails(
+                    function(prevState){
+                        return({...prevState, name: "Isaac Adeba"})
+                    }
+                )
+            }, 1000
+        )
+        setTimeout(
+            function(){
+                setDevDetails(
+                    function(prevState){
+                        return({...prevState, name: "Isaac Adebay"})
+                    }
+                )
+            }, 1100
+        )
+        setTimeout(
+            function(){
+                setDevDetails(
+                    function(prevState){
+                        return({...prevState, name: "Isaac Adebayo"})
+                    }
+                )
+            }, 1200
+        )
+    }
     
+    React.useEffect(
+        function(){
+            setTimeout(
+                happyDev, 3000
+            )
+        },[]
+    )
 
     
 
@@ -13,7 +150,7 @@ export default function About(props){
             <div className="black-sun">
                 <a href="isaac-i.jpg" rel="noreferrer" download="isaac-adebayo-bitmoji.png"><i className="fa fa-cloud-download"/></a>
             </div>
-            <div className="hero"><h1><span>{dev}</span>Isaac Adebayo<span><i className="fa fa-certificate"/><i className="fa fa-check"/></span></h1></div>
+            <div className="hero"><h1><span>{dev}</span>{devDetails.name}<span><i className="fa fa-certificate"/><i className="fa fa-check"/></span></h1></div>
             <div className="role-holder">
                 <div className="role"><h3>frontend developer</h3></div>
                 <div className="languages">

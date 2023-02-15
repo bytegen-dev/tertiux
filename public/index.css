@@ -1145,6 +1145,7 @@ body{
     }
 }
 
+
 @media screen and (max-height: 100px) {
     #root{
         display: none;
