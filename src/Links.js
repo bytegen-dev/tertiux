@@ -2,7 +2,17 @@ import React from "react";
 import Swipe from "react-swipe"
 
 export default function Links(props){
-    
+    async function shareLink(){
+        try {
+            await navigator.share({
+                title: "Tertiux Linktree",
+                text: "Check out my links on TertiUX Linktree",
+                url: "https://tertiux-linktree.netlify.app/"
+            })
+        } catch(error){
+            console.log("Error sharing ", error)
+        }
+    }
 
     return(
         <div className={props.className}>
@@ -30,6 +40,11 @@ export default function Links(props){
                 <a href="https://twitter.com/tertiux44" className="link xp">
                 <i className="fa-brands fa-twitter"></i>Twitter
                 </a>
+            </Swipe>
+            <Swipe className="link-holder">
+                <div onClick={shareLink} className="link share">
+                <i className="fa-solid fa-share-nodes"></i>Share
+                </div>
             </Swipe>
         </div>
     )
