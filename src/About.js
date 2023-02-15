@@ -136,7 +136,7 @@ export default function About(props){
     React.useEffect(
         function(){
             setTimeout(
-                happyDev, 3000
+                happyDev, 3500
             )
         },[]
     )
