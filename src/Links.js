@@ -8,10 +8,6 @@ export default function Links(props){
                 title: "Tertiux Linktree",
                 text: "Check out my links on TertiUX Linktree",
                 url: "https://tertiux-linktree.netlify.app/",
-                files: [new File(["/isaac-i.jpg"], "isaac-i.jpg", {
-                    type: "image/jpeg"
-                  })]
-                  
             })
         } catch(error){
             console.log("Error sharing ", error)
