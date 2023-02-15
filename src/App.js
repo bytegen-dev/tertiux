@@ -72,7 +72,7 @@ export default function App(){
         const today = new Date()
             let hour = today.getHours()
             // console.log(hour)
-            if (hour > 17 || hour < 7){
+            if (hour > 17 || hour < 9){
                 setUiSettings(
                     (prevState)=>{
                         return({...prevState, darkMode: true})
