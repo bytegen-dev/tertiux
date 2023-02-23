@@ -68,7 +68,7 @@ export default function App(){
             setIsOpen(function(prevState){
                 return(!prevState)
             });
-            document.getElementById("menu").style.transform="translateY(100%)"
+            document.getElementById("menu").style.transform="translateY(120%)"
     }
 
     function darkModeTotal(){

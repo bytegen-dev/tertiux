@@ -727,7 +727,7 @@ body{
     z-index: 12;
     background-color: rgb(245, 230, 243);
     transition: all 0.5s ease;
-    transform: translateY(100%) ;
+    transform: translateY(120%) ;
     display: flex;
     flex-direction: column;
     justify-content: center;
