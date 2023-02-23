@@ -47,13 +47,14 @@ export default function App(){
         setUiSettings(
             (prevState)=>{
                 return({
-                    ...prevState, showMenu: !prevState.showMenu
+                    ...prevState, showMenu: true
                 })
             }
         )
         setIsOpen(function(prevState){
             return(!prevState)
         });
+        document.getElementById("menu").style.transform="translateY(0)"
     }
     
     function menuToggleX(){
@@ -63,10 +64,11 @@ export default function App(){
                     ...prevState, showMenu: false
                 })
             }
-        )
-        setIsOpen(function(prevState){
-            return(!prevState)
-        });
+            )
+            setIsOpen(function(prevState){
+                return(!prevState)
+            });
+            document.getElementById("menu").style.transform="translateY(100%)"
     }
 
     function darkModeTotal(){
