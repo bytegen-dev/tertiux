@@ -54,6 +54,7 @@ export default function App(){
         setIsOpen(function(prevState){
             return(!prevState)
         });
+        document.getElementById("menu").classList.remove("hidden")
         document.getElementById("menu").style.transform="translateY(0)"
     }
     
@@ -69,6 +70,8 @@ export default function App(){
                 return(!prevState)
             });
             document.getElementById("menu").style.transform="translateY(120%)"
+            document.getElementById("menu").classList.add("hidden")
+            
     }
 
     function darkModeTotal(){
@@ -157,7 +160,7 @@ export default function App(){
             <Subscription className="subscription"/>
             <Preloader className="preloader" onClick={closeToolong} takeTime={toolongtoload}/>
             <Chatbubble className={chatbotSettings.visible ? "chatbubble show" : "chatbubble"} onClick={openChatbot}/>
-            <Menu darkMode={uiSettings.darkMode} isOpen={isOpen} swipeDown={menuToggleX} className={uiSettings.showMenu?"show menu":"menu"} onClick={toggleDarkMode}/>
+            <Menu darkMode={uiSettings.darkMode} isOpen={isOpen} swipeDown={menuToggleX} className={uiSettings.showMenu?"show menu":"hidden menu"} onClick={toggleDarkMode}/>
             <div onClick={menuToggleX} className={uiSettings.showMenu ? "show backdrop" : "backdrop"}></div>
             <AboutBig onPrev={aboutBig} className={uiSettings.showAboutBig ? "show about-bigger" : "about-bigger"}/>
             <Chatbot className={chatbotSettings.visible ? "chatbot show" : "chatbot"}/>
