@@ -695,7 +695,6 @@ body{
     visibility: hidden;
     transition: all 0.5s ease;
     backdrop-filter: blur(10px);
-    display: none;
 }
 
 
