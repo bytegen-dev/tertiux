@@ -73,7 +73,7 @@ export default function Links(props) {
         </Swipe>
         <Swipe className="link-holder">
           <a href="https://www.facebook.com/isaacadebyo999" className="link xp">
-            <i className="fa-brands fa-facebook-f"></i>Twitter
+            <i className="fa-brands fa-facebook-f"></i>Facebook
           </a>
         </Swipe>
         <Swipe className="link-holder">
