@@ -1023,10 +1023,6 @@ body{
     background-color: transparent;
 }
 
-.chat-holder form input:hover, .chat-holder form input:focus{
-    /* border: 2px solid green; */
-}
-
 .chat-holder form button{
     height: 100%;
     width: 60px;
@@ -1137,10 +1133,10 @@ body{
         position: relative;
         /* scale: 1; */
         transform: scale(1) !important;
-        height: 80%;
+        height: 90%;
         width: 80%;
-        max-width: 400px;
-        max-height: 800px;
+        max-width: 500px;
+        max-height: 1000px;
         border-radius: 40px;
         box-shadow: 0px 0px 10px #0007;
         backdrop-filter: blur(10px);
