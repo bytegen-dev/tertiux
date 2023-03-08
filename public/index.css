@@ -81,8 +81,6 @@ body{
     border-color: rgba(245, 230, 243, 0.194);
 }
 
-.show.navbar{
-}
 
 .navbar .hamburger{
     height: 40px;
@@ -593,9 +591,6 @@ body{
         border-color: #7a6a7a;
     }
 
-    .dark .links .link i{
-        /* padding-right: 20px; */
-    }
     
     .links .link:hover{
         opacity: 0.6;
@@ -671,10 +666,6 @@ body{
     /* opacity: 0.1; */
 }
 
-.about-bigger button:hover{
-    /* scale: 1.15; */
-    /* background-color: #000; */
-}
 
 .copy.ing{
     opacity: 0.1;
@@ -704,11 +695,9 @@ body{
     visibility: hidden;
     transition: all 0.5s ease;
     backdrop-filter: blur(10px);
+    display: none;
 }
 
-.dark .backdrop{
-    
-}
 
 .show.backdrop{
     opacity: 1;
@@ -1181,9 +1170,6 @@ body{
         transform: translateX(-130px);
     }
 
-    .container{
-        /* position: relative; */
-    }
 }
 
 .orientation{
