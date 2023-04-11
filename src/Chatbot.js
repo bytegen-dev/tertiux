@@ -302,7 +302,7 @@ export default function Chatbot(props){
     return(
         <div className={props.className}>
             <div className="chat-holder">
-                <div className="ai-img-holder"><img src="isaac-i.jpg" alt="ai"/><span><i className="fa">AI</i></span></div>
+                <div className="ai-img-holder"><img src="isaac-i.png" alt="ai"/><span><i className="fa">AI</i></span></div>
                 <div className="ai-response">
                     <span>{response.answer}</span>
                 </div>
