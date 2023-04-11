@@ -13,7 +13,11 @@ export default function AboutBig(props){
             return
         }
 
-        navigator.clipboard.writeText("Tertiux is a creative solutions provider in front-end development. Our user-centric approach combines technical skills with a deep understanding of what makes a website both aesthetically pleasing and easy to use.With a talented and experienced team of developers, we deliver exceptional results through diverse perspectives and approaches. Our goal is to help clients create a web presence that provides a seamless user experience.Tertiux 创解 - Solving your web development needs through creativity.")
+        navigator.clipboard.writeText(`I am a creative solutions provider in front-end development. My user-centric approach combines technical skills with a deep understanding of what makes a website both aesthetically pleasing and easy to use.
+
+        With an experience of about 2 years in the tech industry, I deliver exceptional results through diverse perspectives and approaches. My goal is to help clients create a web presence that provides a seamless user experience.
+        
+        Tertiux 创解 - Solving your web development needs through creativity.`)
         console.log("copied")
         setCopied(true)
 
@@ -36,7 +40,7 @@ export default function AboutBig(props){
                     I am a creative solutions provider in front-end development. My user-centric approach combines technical skills with a deep understanding of what makes a website both aesthetically pleasing and easy to use.
                 </p>
                 <p>
-                    With an experience of about 2 years in the tech industry, I deliver exceptional results through diverse perspectives and approaches. My goal is to help clients create a web presence that provides a seamless user experience.
+                    With an experience of about 2 years in the tech industry, I deliver exceptional results through diverse perspectives and approaches. My goal is to help brands and companies create a unique web presence that provides a seamless user experience.
                 </p>
                 <p>
                     Tertiux 创解 - Solving your web development needs through creativity.
