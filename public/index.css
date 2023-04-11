@@ -1138,7 +1138,7 @@ body{
         align-items: center;
         height: 100vh;
         background-color: #000;
-        background-image: linear-gradient(rgba(31, 1, 53, 0.779), rgb(0, 0, 0)), url(isaac-i.jpg);
+        background-image: linear-gradient(rgba(31, 1, 53, 0.779), rgb(0, 0, 0)), url(isaac-i.png);
         background-size: cover;
         background-repeat: no-repeat;
     }
