@@ -19,7 +19,7 @@ export default function Chatbot(props){
         heightm: "about 1.5m",
         weight: "68kg",
         languages: "English, Yoruba and beginner-level Spanish",
-        topProgLanguages: "Html, Css, Vanilla.js, React.js",
+        topProgLanguages: "Html, Css, Javascript, React.js, Python",
         mediumProgLanguages: "Wordpress, Sass, Redux, React native, Cordova",
         nicknamei: {
             name: "Ade"
@@ -36,12 +36,14 @@ export default function Chatbot(props){
             name: "Tertiux",
             why: ""
         },
-        background: "Isaac Adebayo is a driven and ambitious young individual from Okene, Kogi state in Nigeria. Born into a family of Christian missionaries, Isaac has lived and traveled to various parts of the country, acquiring a diverse range of experiences and building long-lasting relationships with people along the way. This nomadic lifestyle has shaped his perspective, giving him the ability to see situations from different angles and approach problem-solving with creativity. Isaac's journey in the tech industry began in secondary school when he discovered his passion for coding. He started by making games on Scratch, and later transitioned to front-end development after attending a bootcamp organized by Xeraxlabs in October 2022. He is now driven to pursue a full-stack tech career, seeking to acquire diverse skills and limitless ideas to help solve real-world problems. In addition to his tech pursuits, Isaac is also a student at the Federal University of Technology, Akure, where he is working towards a bachelor's degree in Cybersecurity.",
+        background: `Isaac Adebayo is a creative solutions provider in front-end development. His user-centric approach combines technical skills with a deep understanding of what makes a website both aesthetically pleasing and easy to use.
+
+        With an experience of about 2 years in the tech industry, He has delivered exceptional results through diverse perspectives and approaches. His goal is to help companies and brands create a web presence that provides a seamless user experience.`,
         links: {
             whatsapp: "https://wa.me/+2347035658853",
             twitter: "https://twitter.com/tertiux44",
             gmail: "secondsonofadebayo@gmail.com",
-            github:"https://github.com/scottdhollar"
+            github:"https://github.com/tertiux"
         },
         walinkvisible: false,
         thinking: false,
@@ -179,7 +181,7 @@ export default function Chatbot(props){
                     )
                     return
                 } else if(
-                    question.question.toLowerCase().includes("single")||question.question.toLowerCase().includes("married")||question.question.toLowerCase().includes("marital")||question.question.toLowerCase().includes("isaac love")||question.question.toLowerCase().includes("girl friend")||question.question.toLowerCase().includes("boyfriend")||question.question.toLowerCase().includes("best friend")
+                    question.question.toLowerCase().includes("single")||question.question.toLowerCase().includes("married")||question.question.toLowerCase().includes("marital")||question.question.toLowerCase().includes("love")||question.question.toLowerCase().includes("girl friend")||question.question.toLowerCase().includes("boy friend")||question.question.toLowerCase().includes("best friend")
                 ){
                     setResponse(
                         (prevState)=>{
