@@ -1,4 +1,4 @@
-<h1 align="center">Hello 👋, I'm Isaac Adebayo ⚡</h1>
+<h1 align="center">Hello 👋, I'm Tertiux ⚡</h1>
 <h3 align="center">A creative solutions provider in the field of web development ❤️‍🔥 _frontend developer from Akure, Nigeria 🇳🇬</h3>
 
 - 👨‍💻 All of my projects are available at [https://tertiux-dev.netlify.app](https://tertiux-dev.netlify.app)
