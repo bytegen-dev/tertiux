@@ -3,7 +3,7 @@
 
 
 
-- 📫 How to reach me **xpertstudio8@gmail.com**
+- 📫 How to reach me **secondsonofadebayo@gmail.com**
 
 - ⚡ Fun fact **I think I am funny 😅**
 
