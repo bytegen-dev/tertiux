@@ -1,5 +1,5 @@
 <h1 align="center">Hello 👋, I'm Isaac Adebayo⚡</h1>
-<h3 align="center">A creative solutions provider in the field of web development ❤️‍🔥 _frontend developer from Akure, Nigeria 🇳🇬</h3>
+<h3 align="center">Web3 developer || React expert || UI/UX designer</h3>
 
 
 
