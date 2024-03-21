@@ -1,5 +1,5 @@
 <h1 align="center">Hello 👋, I'm Isaac Adebayo⚡</h1>
-<h3 align="center">Software developer || React expert || UI/UX designer</h3>
+<h3 align="center">⚡️ React developer x UI designer | Javascript Developer 🔥</h3>
 
 
 
